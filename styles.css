@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle, #000d1a, #000);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.center {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.moon,
+.meteor {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  z-index: 2; /* Mantém a lua e os meteoros acima das linhas */
+}
+
+.moon {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.moon-img {
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8));
+}
+
+.meteor-img {
+  width: 50px;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(255, 69, 0, 0.8));
+}
+
+.meteor-left {
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.meteor-right {
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1; /* Garante que as linhas fiquem atrás de todos os outros elementos */
+}
+
+.line-left,
+.line-right {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 4;
+}
