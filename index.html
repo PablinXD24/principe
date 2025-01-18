@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lua e Meteoros com Música</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <audio id="background-music" loop>
+    <source src="musica.mp3" type="audio/mp3">
+    Seu navegador não suporta áudio.
+  </audio>
+  
+  <div class="center">
+    <div class="moon">
+      <img src="moon.png" alt="Lua" class="moon-img">
+    </div>
+    <div class="meteor meteor-left" data-meteor="left">
+      <img src="meteor-left.png" alt="Meteoro Esquerdo" class="meteor-img">
+    </div>
+    <div class="meteor meteor-right" data-meteor="right">
+      <img src="meteor-right.png" alt="Meteoro Direito" class="meteor-img">
+    </div>
+    <svg class="lines" xmlns="http://www.w3.org/2000/svg">
+      <line x1="50%" y1="50%" x2="25%" y2="50%" class="line-left" />
+      <line x1="50%" y1="50%" x2="75%" y2="50%" class="line-right" />
+    </svg>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
